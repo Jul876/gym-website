@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <link rel="stylesheet" href="style.css">
+<head>
+  <title>أسعار الاشتراك</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') no-repeat center center fixed;
+      background-size: cover;
+	  padding-top: 150px; /* مسافة من الأعلى */
+
+    }
+
+
+    .container {
+      max-width: 90%;
+      margin: 60px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4b4542;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      padding: 14px;
+      border: 1px solid #ccc;
+      font-size: 18px;
+    }
+
+    th {
+      background-color: #756e6a;
+      color: white;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #e2dbd7;
+      color: #382e2c;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #98908c;
+      color: white;
+    }
+
+    
+  </style>
+</head>
+<body id="page">
+
+   <script>
+    function changeFont(font) {
+      document.getElementById("page").style.fontFamily = font;
+    }
+  </script>
+
+  <div class="header">
+    <a href="Page1.html" class="logo"><img src="p2.jpg" style="height:80px; "></a> 
+    <div class="navbar">
+        <a href="Page1.html">الرئيسية</a>
+		<a href="Page2.html">العضوية</a>
+		<a href="Page6.html">أسعار الاشتراك</a>
+        <a href="Page9.html">مواعيد الأنشطة</a> 
+
+	   <a>نوع الخط:</a>
+        <select onchange="changeFont(this.value)">
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Tahoma">Tahoma</option>
+		  <option value="Verdana">Verdana</option>
+        </select>		
+    </div>
+  </div>
+
+ 
+  <div class="container">
+    <h2>أسعار الاشتراك</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>الرياضات</th>
+          <th>شهري</th>
+          <th>سنوي</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>يوغا</td>
+          <td>200 ريال</td>
+          <td>1800 ريال</td>
+        </tr>
+        <tr>
+          <td>سباحة</td>
+          <td>250 ريال</td>
+          <td>2000 ريال</td>
+        </tr>
+        <tr>
+          <td>بوكسنق</td>
+          <td>300 ريال</td>
+          <td>2500 ريال</td>
+        </tr>
+        <tr>
+          <td>كاراتيه</td>
+          <td>220 ريال</td>
+          <td>2000 ريال</td>
+        </tr>
+        <tr>
+          <td>أجهزة</td>
+          <td>150 ريال</td>
+          <td>1300 ريال</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

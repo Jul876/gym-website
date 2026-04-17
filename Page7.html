@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- يحدد انه اللغة عربية والنص من اليمين لليسار -->
+<head>
+  <title>نموذج الاشتراك</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+
+    body {
+      background-image: url("p3.jpg");
+      background-size: cover;  /*الخلفية تغطي الشاشة كاملة */
+      background-position: center; 
+      background-attachment: fixed;  /* يخلي الخلفية ثابتة لما امرر */
+      min-height: 100vh; /* الطول ما يقل عن ارتفاع الشاشة*/
+      display: flex;
+      justify-content: center; /* توسيط أفقي */
+      align-items: center; /* توسيط عمودي */
+      padding-top: 100px; /* مسافة من الأعلى */
+    }
+
+    
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px; /* مساحة داخلية */
+      border-radius: 12px; 
+      width: 600px; 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    }
+
+    
+    h1 {
+      text-align: center; 
+      margin-bottom: 25px; /* مسافة تحته */
+      color: #222; 
+    }
+
+    
+    .row {
+      display: flex; /* ترتيب العناصر أفقياً */
+      gap: 20px; /* مسافة بين المستطيلات */
+      margin-bottom: 15px; /* مسافة أسفل كل صف */
+    }
+
+    
+    .field {
+      flex: 1; /* كل حقل يأخذ نفس العرض */
+      display: flex; 
+      flex-direction: column; /* ترتيب عمودي: (label فوق، input تحت) */
+    }
+
+
+    label {
+      margin-bottom: 6px; /* مسافة تحت التسمية */
+      font-weight: bold; 
+      color: #333;
+    }
+
+    
+    input, .sselect {
+      padding: 12px; /* مساحة داخلية للفيلد */
+      border: 1px solid #ccc; 
+      border-radius: 8px; 
+      background: #f9f9f9; 
+      font-size: 15px; 
+    }
+
+    
+    button {
+      width: 100%; 
+      margin-top: 20px; /* مسافة فوق الزر */
+      padding: 12px; /* مساحة داخلية للزر */
+      background-color: #5f5855;
+      color: white; 
+      border: none; 
+      border-radius: 6px;
+    }
+
+ 
+    button:hover {
+      background-color: #382e2c;
+    }
+	
+
+  </style>
+</head>
+<body id="page">
+
+   <script>
+    function changeFont(font) {
+      document.getElementById("page").style.fontFamily = font;
+    }
+  </script>
+  
+  <!-- شريط التنقل العلوي -->
+  <div class="header">
+    <a href="Page1.html" class="logo"><img src="p2.jpg" style="height:80px; "></a> 
+    <div class="navbar">
+        <a href="Page1.html">الرئيسية</a>
+		<a href="Page2.html">العضوية</a>
+		<a href="Page6.html">أسعار الاشتراك</a>
+        <a href="Page9.html">مواعيد الأنشطة</a>
+
+	   <a>نوع الخط:</a>
+        <select onchange="changeFont(this.value)">
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Verdana">Verdana</option>
+		  
+		  
+        </select>		
+    </div>
+  </div>
+
+  
+  <div class="form-container">
+    <h1>نموذج الاشتراك</h1>
+
+    <form>
+      <!-- الصف الأول: الاسم الأول والاسم الأخير -->
+      <div class="row">
+        <div class="field">
+          <label for="first-name">الاسم الأول</label>
+          <input type="text" id="first-name" name="first-name" placeholder="ادخل اسمك الاول">
+        </div>
+        <div class="field">
+          <label for="last-name">الاسم الأخير</label>
+          <input type="text" id="last-name" name="last-name" placeholder="ادخل اسمك الاخير">
+        </div>
+      </div>
+
+      <!-- الصف الثاني: البريد الإلكتروني ورقم الجوال -->
+      <div class="row">
+        <div class="field">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com">
+        </div>
+        <div class="field">
+          <label for="phone">رقم الجوال</label>
+          <input type="tel" id="phone" name="phone" placeholder="05XXXXXXXX">
+        </div>
+      </div>
+
+      <!-- الصف الثالث: تاريخ الميلاد ومدة الاشتراك -->
+      <div class="row">
+        <div class="field">
+          <label for="dob">تاريخ الميلاد</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+        <div class="field">
+          <label for="subscription">مدة الاشتراك</label>
+          <select class="sselect" id="subscription" name="subscription">
+            <option>شهر</option>
+            <option>6 أشهر</option>
+            <option>سنة</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- صف مشترك: الأنشطة + استخدام أجهزة النادي -->
+      <div class="row">
+        <!-- اختيار الأنشطة -->
+        <div class="field">
+          <label>اختر الأنشطة:</label>
+          <div>
+            <input type="checkbox" id="swimming"><label for="swimming"> السباحة</label><br>
+            <input type="checkbox" id="yoga"><label for="yoga"> اليوغا</label><br>
+			<input type="checkbox" id="kara"><label for="kara"> كاراتية</label><br>
+			<input type="checkbox" id="boxing"><label for="boxing"> ملاكمة</label><br>
+          </div>
+        </div>
+
+        <!-- اختيار استخدام الأجهزة -->
+        <div class="field">
+          <label><strong>هل تريد استخدام أجهزة النادي؟</strong></label>
+          <div>
+            <input type="radio" name="gym-access" id="yes"><label for="yes"> نعم</label><br>
+            <input type="radio" name="gym-access" id="no"><label for="no"> لا</label>
+          </div>
+        </div>
+      </div>
+
+     
+     <button type="button" onclick="window.location.href='Page10.html';">إرسال</button>
+ 
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- تحديد اللغة بالعربية واتجاه النص من اليمين لليسار -->
+<head>
+  <title>مواعيد الانشطة</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+  
+    body {
+      background-image: url("p3.jpg"); 
+      background-size: cover; 
+      background-position: center;
+      background-attachment: fixed; 
+    }
+  
+    .schedule-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      margin-top: 40px;
+      padding: 25px;
+      border-radius: 12px;
+      width: 90%; /* جعل الجدول أكبر */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+ h1 {
+  text-align: center;
+  color:  #5f5855; /* موف غامق */
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 16px;
+}
+.table-position {
+  display: flex;
+  justify-content: center;  /* توسيط أفقي */
+  margin-top: 150px;
+}
+
+td {
+  background-color:#e2dbd7;
+  padding: 18px; /* زاد عرض الصف */
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #756e6a;
+  color: white;
+  padding: 18px; /* زاد عرض الصف */
+  border: 1px solid #ddd;
+}
+
+
+.darkcolor {
+  background-color:#98908c; 
+}
+ </style>
+</head>
+<body id="page">
+
+   <script>
+    function changeFont(font) {
+      document.getElementById("page").style.fontFamily = font;
+    }
+  </script>
+
+  <!-- شريط التنقل العلوي -->
+  <div class="header">
+    <a href="Page1.html" class="logo"><img src="p2.jpg" style="height:80px; "></a> 
+    <div class="navbar">
+        <a href="Page1.html">الرئيسية</a>
+		<a href="Page2.html">العضوية</a>
+		<a href="Page6.html">أسعار الاشتراك</a>
+        <a href="Page9.html">مواعيد الأنشطة</a> 
+
+	   <a><label>نوع الخط:</label></a>
+        <select onchange="changeFont(this.value)">
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Tahoma">Tahoma</option>
+		  <option value="Verdana">Verdana</option>
+        </select>		
+    </div>
+  </div>
+  
+  <body>
+  <!-- جدول مواعيد الأنشطة -->
+<div class="table-position"> 
+<div class="schedule-container">
+  <h1>جدول مواعيد الأنشطة</h1>
+  <table>
+    
+      <tr>
+        <th>اليوم</th>
+        <th>سباحة</th>
+        <th>يوغا</th>
+		<th>كاراتية</th>
+		<th>ملاكمة</th>
+        <th>الاجهزة الرياضية</th>
+      </tr>
+    
+    
+      <tr>
+        <td>الأحد</td>
+          <td>4:00 - 5:00 م</td>
+          <td>6:00 - 7:00 م</td>
+          <td>4:00 - 5:00 م</td>
+          <td>6:00 - 7:00 م</td>
+        <td>متاح خلال اوقات العمل</td>
+      </tr>
+	  
+        <tr>
+          <td class="darkcolor">الإثنين</td>
+          <td class="darkcolor">10:00 - 11:00 ص</td>
+          <td class="darkcolor">5:00 - 6:00 م</td>
+          <td class="darkcolor">4:00 - 5:00 م</td>
+          <td class="darkcolor">6:00 - 7:00 م</td>
+        <td class="darkcolor">متاح خلال اوقات العمل</td>
+      </tr>
+	  
+      <tr>
+        <td>الثلاثاء</td>
+          <td>4:00 - 5:00 م</td>
+          <td>6:00 - 7:00 م</td>
+          <td>4:00 - 5:00 م</td>
+          <td>6:00 - 7:00 م</td>
+        <td>متاح خلال اوقات العمل</td>
+      </tr>
+	  
+      <tr>
+        <td class="darkcolor">الأربعاء</td>
+          <td class="darkcolor">10:00 - 11:00 ص</td>
+          <td class="darkcolor">5:00 - 6:00 م</td>
+          <td class="darkcolor">4:00 - 5:00 م</td>
+          <td class="darkcolor">6:00 - 7:00 م</td>
+        <td class="darkcolor">متاح خلال اوقات العمل</td>
+      </tr>
+	  
+      <tr>
+          <td>الخميس</td>
+          <td>4:00 - 5:00 م</td>
+          <td>6:00 - 7:00 م</td>
+          <td>4:00 - 5:00 م</td>
+          <td>6:00 - 7:00 م</td>
+          <td>متاح خلال اوقات العمل</td>
+      </tr>
+    
+  </table>
+</div>
+</div>
+</body>
+</html>
+
+

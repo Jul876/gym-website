@@ -1,0 +1,44 @@
+.header {
+    position: fixed; /* يخلي الهيدر ثابت لما تنزلين تحت ما يتحرك ويختفي */
+	top: 0;
+    right: 0;
+    left: 0;
+    width: 100%; 
+    background-color: rgba(56, 46, 44, 0.8); 
+    backdrop-filter: blur(10px); /* يخليها ضبابيه */
+    padding: 15px 10px; 
+    display: flex; /* يخليها مرتبة افقي */
+    flex-direction: row-reverse; /* يرتبها من اليمين لليسار عشان بالعربي */
+    align-items: center; 
+    justify-content: space-between; 
+    z-index: 1000;
+}
+
+.logo {
+    padding: 8px 25px; 
+}
+
+.navbar  a   {
+    color: #fff; 
+    font-size: 22px; 
+    padding: 8px 12px; 
+    border-radius: 6px;
+    transition: 0.3s; 
+    text-decoration: none; 
+}
+
+.navbar a:hover {
+    background-color:#756e6a;  
+}
+
+
+
+
+
+
+
+	
+	
+	
+	
+	

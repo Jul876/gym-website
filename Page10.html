@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"  > <!-- انه اللغة الي بنستخدمها عربي كمان الترتيب يكون من اليمين لليسار -->
+<head>
+    <title>شكراً لاشتراكك</title>
+    <!-- إضافة Font Awesome للأيقونات -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* تنسيق الخلفية */
+        body {
+            background-color: #D4C9BE; /* لون الخلفية */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 100vh; /* جعل الصفحة تأخذ كامل الارتفاع */
+        }
+
+        /* مسافة فوق الصورة */
+        .image-container {
+            margin-top: 50px; /* المسافة فوق الصورة */
+        }
+
+        /* تنسيق الصورة لتكون 70% من عرض الصفحة */
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 70%; /* زيادة الحجم ليصبح 70% من عرض الصفحة */
+            height: auto; /* الحفاظ على التناسب */
+            max-width: 800px; /* الحد الأقصى لعرض الصورة */
+        }
+
+        /* تنسيق زر الطباعة */
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #5f5855; /* لون الزر */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s ease; /* تأثير التغيير عند التمرير */
+        }
+
+        /* تغيير لون الزر عند التمرير */
+        button:hover {
+            background-color: #382e2c; /* لون hover */
+        }
+
+hr {
+    margin: 50px auto 30px auto; /* مسافة بين الزر والحسابات */
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.contact-section {
+    text-align: center;
+    margin-top: 80px; /* جعل القسم ينزل للأسفل أكثر */
+}
+
+
+        /* تنسيق الروابط في سطرين */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px; /* زيادة المسافة بين الروابط */
+            font-size: 22px; /* زيادة حجم النص */
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .social-media a:hover {
+            color: #0056b3;
+        }
+
+        /* تنسيق رقم الجوال مع أيقونة الهاتف */
+        .phone {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .phone i {
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        // عرض رسالة "شكراً لاشتراكك" عند تحميل الصفحة
+        window.alert("شكراً لاشتراكك");
+    </script>
+
+    <!-- مسافة فوق الصورة -->
+    <div class="image-container">
+        <!-- إضافة الصورة مباشرة في HTML -->
+        <img src="tic.jpg" alt="تذكرة الدخول">
+    </div>
+
+    <!-- إضافة زر "اضغط لطباعه" -->
+    <button onclick="window.print()">اضغط لطباعه</button>
+
+    <!-- إضافة فاصل بين الزر وحسابات التواصل -->
+    <hr>
+
+    <!-- إضافة حسابات التواصل الاجتماعي ورقم الجوال والبريد الإلكتروني -->
+    <div class="contact-section">
+        <!-- رقم الجوال مع أيقونة الهاتف -->
+        <p class="phone">رقم الجوال: 0501234567 <i class="fas fa-phone-alt"></i></p>
+        <p>البريد الإلكتروني: <a href="mailto:spiritofchallenge@gmail.com">spiritofchallenge@gmail.com</a></p>
+        
+        <!-- حسابات التواصل الاجتماعي مع أيقونات لكل برنامج -->
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> إنستجرام</a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> تويتر</a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> فيسبوك</a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> لينكد إن</a>
+        </div>
+    </div>
+</body>
+</html>
+

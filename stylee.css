@@ -1,0 +1,151 @@
+:root {
+  /* شفافية بنية فاتحة لتطابق شريط الرأس في الصورة */
+  --header-bg: rgba(57, 43, 31, 0.85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  /* خلفية بصورة صالة الألعاب 
+  background: url('image/ss1.jpg') no-repeat center/cover; */
+  background-color: #D4C9BE;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding:  200px;
+}
+
+
+/* ========== GRID المحتوى الرئيسي ========== */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== شبكة الأنشطة ========== */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ========== بطاقة النشاط ========== */
+.activity-item {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+.activity-image-container {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+}
+.activity-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.activity-content {
+  padding: 20px;
+  flex: 1;
+}
+.activity-content h2 {
+  margin-bottom: 10px;
+}
+
+/* ========== الأزرار ========== */
+.subscribe-btn,
+.more-btn,
+.btn,
+.btn-large {
+  background: var(--header-bg);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.subscribe-btn,
+.more-btn {
+  padding: 8px 12px;
+  transition: opacity 0.3s;
+}
+/* زر الاشتراك يظهر عند التمرير */
+.subscribe-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.activity-item:hover .subscribe-btn {
+  opacity: 1;
+}
+/* زر المزيد في صفحة الأنشطة */
+.more-btn {
+  display: none;
+  margin-top: 10px;
+}
+.activity-item:hover .more-btn {
+  display: inline-block;
+}
+/* الأزرار العامة */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+}
+.btn-large {
+  font-size: 1.2rem;
+}
+
+/* ========== وصف جانبي وصورة ========== */
+.description-box {
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+.activity-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ========== استجابة ========== */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* زر الاشتراك تحت "أحدث المعدات الرياضية" */
+.description-box .subscribe-btn {
+  position: static;        /* يرقى إلى التدفق الطبيعي */
+  opacity: 1 !important;   /* يجعله ظاهراً دائماً */
+  margin-top: 15px;        /* مسافة فوق الزر */
+  transform: none !important;
+  display: inline-block;

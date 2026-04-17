@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- يحدد انه اللغة عربية والنص من اليمين لليسار -->
+<head>
+  <title>نموذج العضوية</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    
+    body {
+      background-image: url("p3.jpg");
+      background-size: cover;  /*الخلفية تغطي الشاشة كاملة */
+      background-position: center; 
+      background-attachment: fixed;  /* يخلي الخلفية ثابتة لما امرر */
+      min-height: 100vh; /* الطول ما يقل عن ارتفاع الشاشة*/
+      display: flex;
+      justify-content: center; /* توسيط أفقي */
+      align-items: center; /* توسيط عمودي */
+      padding-top: 150px; /* مسافة من الأعلى */
+    }
+
+    
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px; /* مساحة داخلية */
+      border-radius: 12px; 
+      width: 600px; 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    }
+
+    
+    h1 {
+      text-align: center; 
+      margin-bottom: 25px; /* مسافة تحته */
+      color: #222; 
+    }
+
+    
+    .row {
+      display: flex; /* ترتيب العناصر أفقياً */
+      gap: 20px; /* مسافة بين المستطيلات */
+      margin-bottom: 15px; /* مسافة أسفل كل صف */
+    }
+
+    
+    .field {
+      flex: 1; /* كل حقل يأخذ نفس العرض */
+      display: flex; 
+      flex-direction: column; /* ترتيب عمودي: (label فوق، input تحت) */
+    }
+
+
+    label {
+      margin-bottom: 6px; /* مسافة تحت التسمية */
+      font-weight: bold; 
+      color: #333;
+    }
+
+    
+    input, .sselect {
+      padding: 12px; /* مساحة داخلية للفيلد */
+      border: 1px solid #ccc; 
+      border-radius: 8px; 
+      background: #f9f9f9; 
+      font-size: 15px; 
+    }
+
+    
+    .member-section {
+      margin-top: 15px;
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px dashed #ccc;
+      border-radius: 6px;
+    }
+
+    
+    button {
+      width: 100%; 
+      margin-top: 20px; /* مسافة فوق الزر */
+      padding: 12px; /* مساحة داخلية للزر */
+      background-color: #5f5855;
+      color: white; 
+      border: none; 
+      border-radius: 6px;
+    }
+
+ 
+    button:hover {
+      background-color: #382e2c;
+    }
+  </style>
+</head>
+<body id="page">
+
+   <script>
+    function changeFont(font) {
+      document.getElementById("page").style.fontFamily = font;
+    }
+  </script>
+  
+  <!-- شريط التنقل العلوي -->
+  <div class="header">
+    <a href="Page1.html" class="logo"><img src="p2.jpg" style="height:80px; "></a> 
+    <div class="navbar">
+        <a href="Page1.html">الرئيسية</a>
+		<a href="Page2.html">العضوية</a>
+		<a href="Page6.html">أسعار الاشتراك</a>
+        <a href="Page9.html">مواعيد الأنشطة</a> 
+
+	   <a>نوع الخط:</a>
+        <select onchange="changeFont(this.value)">
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Tahoma">Tahoma</option>
+		  <option value="Verdana">Verdana</option>
+        </select>		
+    </div>
+  </div>
+  
+  <div class="form-container">
+    <h1>نموذج العضوية</h1>
+
+    
+    <div class="row">
+      <div class="field">
+        <label>الاسم الكامل</label>
+        <input type="text" placeholder="ادخل اسمك الكامل">
+      </div>
+      <div class="field">
+        <label>رقم الجوال</label>
+        <input type="tel" placeholder="05XXXXXXXX">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label>البريد الإلكتروني</label>
+        <input type="email" placeholder="example@email.com">
+      </div>
+      <div class="field">
+        <label>نوع العضوية</label>
+        <select class="sselect">
+          <option>فردية</option>
+          <option>عائلية</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- فرد 1 -->
+    <div class="member-section">
+      <h4>فرد 1</h4>
+      <div class="row">
+        <div class="field">
+          <label> الاسم الكامل</label>
+          <input type="text" placeholder="ادخل اسمك الكامل">
+        </div>
+        <div class="field">
+          <label>تاريخ الميلاد</label>
+          <input type="date">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>الجنس</label>
+          <select class="sselect">
+            <option>ذكر</option>
+            <option>أنثى</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>العلاقة</label>
+          <select class="sselect">
+            <option>ام</option>
+            <option>اخت</option>
+            <option>ابن</option>
+            <option>ابنة</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- فرد 2 -->
+    <div class="member-section">
+      <h4>فرد 2</h4>
+      <div class="row">
+        <div class="field">
+          <label> الاسم الكامل</label>
+          <input type="text" placeholder="ادخل اسمك الكامل">
+        </div>
+        <div class="field">
+          <label>تاريخ الميلاد</label>
+          <input type="date">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>الجنس</label>
+          <select class="sselect">
+            <option>ذكر</option>
+            <option>أنثى</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>العلاقة</label>
+          <select class="sselect">
+            <option>ام</option>
+            <option>اخت</option>
+            <option>ابن</option>
+            <option>ابنة</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    
+
+<button type="button" onclick="window.location.href='Page10.html';">إرسال</button>
+
+
+  </div> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

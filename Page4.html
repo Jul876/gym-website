@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+  <title>نادي روح التحدي – الرئيسية</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="stylee.css" />
+</head>
+<body>
+ <!-- شريط التنقل العلوي -->
+  <div class="header">
+    <a href="Page1.html" class="logo"><img src="p2.jpg" style="height:80px; "></a> 
+    <div class="navbar">
+        <a href="Page1.html">الرئيسية</a>
+		<a href="Page2.html">العضوية</a>
+		<a href="Page6.html">أسعار الاشتراك</a>
+        <a href="Page9.html">مواعيد الأنشطة</a> 
+
+	   <a><label>نوع الخط:</label></a>
+        <select onchange="changeFont(this.value)">
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Tahoma">Tahoma</option>
+		  <option value="Verdana">Verdana</option>
+        </select>		
+    </div>
+  </div>
+  
+
+  <section class="main-content">
+    <div class="container">
+      <div class="content-grid">
+        <!-- العمود الأيسر: الأنشطة -->
+        <div class="left-column">
+          <h3>أنشطتنا الرياضية</h3>
+          <div class="activities-grid">
+            <!-- مثال نشاط -->
+            <div class="activity-item">
+              <a href="activities.html" class="activity-image-container">
+                <img src="صف اليوجا.jpg" alt="يوغا" class="activity-img"/>
+              </a>
+              <div class="activity-content">
+                <h2>يوغا</h2>
+              </div>
+              <!-- زر المزيد ينتقل إلى صفحة الأنشطة -->
+              <a href="Page3.html">
+                <button class="more-btn">المزيد</button>
+              </a>
+            </div>
+            <!-- سباحة -->
+            <div class="activity-item">
+              <a href="Page3.html" class="activity-image-container">
+                <img src="حمام السباحة.jpg" alt="سباحة" class="activity-img"/>
+              </a>
+              <div class="activity-content">
+                <h2>سباحة</h2>
+              </div>
+              <a href="Page3.html">
+                <button class="more-btn">المزيد</button>
+              </a>
+            </div>
+            <!-- ملاكمة -->
+            <div class="activity-item">
+              <a href="Page3.html" class="activity-image-container">
+                <img src="p21.jpg" alt="ملاكمة" class="activity-img"/>
+              </a>
+              <div class="activity-content">
+                <h2>ملاكمة</h2>
+              </div>
+              <a href="Page3.html">
+                <button class="more-btn">المزيد</button>
+              </a>
+            </div>
+            <!-- كاراتيه -->
+            <div class="activity-item">
+              <a href="activities.html" class="activity-image-container">
+                <img src="كاراتيه.jpg" alt="كاراتيه" class="activity-img"/>
+              </a>
+              <div class="activity-content">
+                <h2>كاراتيه</h2>
+              </div>
+              <a href="Page3.html">
+                <button class="more-btn">المزيد</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الأيمن: وصف وصورة -->
+        <div class="right-column">
+          <div class="description-box">
+            <h3>أحدث المعدات الرياضية</h3>
+            <p>نوفر أحدث أجهزة اللياقة البدنية من أفضل الماركات العالمية</p>
+            <p>أجهزة كارديو متطورة تشمل المشايات والدراجات الثابتة وأجهزة التجديف</p>
+            <p>منطقة مخصصة لتمارين الأوزان الحرة والآلات المخصصة لكل مجموعة عضلية</p>
+            <p>تساعد الرياضة المنتظمة على تحسين الصحة العامة والحالة النفسية</p>
+            <p>ممتاز للرجال والنساء</p>
+
+            <!-- زر الاشتراك الجديد -->
+            <a href="Page7.html">
+              <button class="subscribe-btn">اشترك</button>
+            </a>
+          </div>
+
+          <div class="activity-image">
+            <h3>صفوف تدريبية مميزة</h3>
+            <img src="صف اليوجا.jpg" alt="صفوف تدريبية مميزة"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

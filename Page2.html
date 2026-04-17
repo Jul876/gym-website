@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>صفحة العضوية</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      padding: 50px 20px;
+    }
+
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+      color: #2a2929;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-box h2, .info-box h3 {
+      color: #382e2c;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✔ ";
+      margin-left: 5px;
+      color: #321c05;
+    }
+
+    .subscribe-button {
+      background-color: #5f5855;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 25px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    .subscribe-button:hover {
+      background-color: #382e2c;
+    }
+  </style>
+</head>
+<body id="page">
+
+   <script>
+    function changeFont(font) {
+      document.getElementById("page").style.fontFamily = font;
+    }
+  </script>
+<div class="overlay">
+
+  <!-- شريط التنقل العلوي -->
+ <div class="header">
+    <a href="Page1.html" class="logo"><img src="p2.jpg" style="height:80px; "></a> 
+    <div class="navbar">
+        <a href="Page1.html">الرئيسية</a>
+		<a href="Page2.html">العضوية</a>
+		<a href="Page6.html">أسعار الاشتراك</a>
+        <a href="Page9.html">مواعيد الأنشطة</a> 
+
+	   <a>نوع الخط:</a>
+        <select onchange="changeFont(this.value)">
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Tahoma">Tahoma</option>
+		  <option value="Verdana">Verdana</option>
+        </select>		
+    </div>
+  </div>
+
+ 
+  <div class="content">
+    <div class="info-box">
+      <h2>مميزات الاشتراك الفردي</h2>
+      <ul>
+        <li>دخول غير محدود إلى الصالة</li>
+        <li>حضور الحصص الجماعية</li>
+        <li>خصومات على المدربين الشخصيين</li>
+      </ul>
+
+      <h3>مميزات الاشتراك العائلي</h3>
+      <ul>
+        <li>يشمل حتى شخصين</li>
+        <li>أنشطة رياضية متنوعة</li>
+        <li>خصومات خاصة للعائلة</li>
+      </ul>
+
+  
+      <a href="Page8.html">
+        <button class="subscribe-button">اشترك الآن</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
