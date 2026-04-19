@@ -12,5 +12,5 @@
 
 
 
-A group project for a sports club website built with HTML and CSS. It includes registration, membership, activities, activity schedules, and children’s programs. My contribution was designing the subscription form, membership form, activity schedule page, and the top navigation bar. The project focuses on a simple, responsive UI without backend or database functionality.
+A group project for a gym website built with HTML and CSS. It includes registration, membership, activities, activity schedules, and children’s programs. My contribution was designing the subscription form, membership form, activity schedule page, and the top navigation bar. The project focuses on a simple, responsive UI without backend or database functionality.
 
